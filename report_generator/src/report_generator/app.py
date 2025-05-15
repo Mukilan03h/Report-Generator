@@ -44,12 +44,8 @@ report_manager = ReportManager(REPORT_HISTORY_FILE)
 file_processor = FileProcessor()
 
 # Initialize Gemini API client
-try:
-    gemini_client = GeminiReportGenerator(GEMINI_API_KEY)
-    GEMINI_AVAILABLE = True
-except Exception as e:
-    logger.warning(f"Failed to initialize Gemini client: {str(e)}")
-    GEMINI_AVAILABLE = False
+gemini_client = GeminiReportGenerator(GEMINI_API_KEY)
+GEMINI_AVAILABLE = True
 
 def init_session_state():
     """Initialize session state variables"""

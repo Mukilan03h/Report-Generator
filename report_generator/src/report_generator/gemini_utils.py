@@ -12,11 +12,28 @@ class GeminiReportGenerator:
     def __init__(self, api_key: Optional[str] = None):
         """Initialize the Gemini API client"""
         self.api_key = api_key or os.getenv('GEMINI_API_KEY')
-        if not self.api_key:
-            raise ValueError("GEMINI_API_KEY not found in environment variables")
         
-        genai.configure(api_key=self.api_key)
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        # If API key is not provided, prompt the user to enter it
+        if not self.api_key:
+            import streamlit as st
+            st.warning("Gemini API key not found in environment variables.")
+            self.api_key = st.text_input(
+                "Please enter your Gemini API key:",
+                type="password",
+                key="gemini_api_key"
+            )
+            if not self.api_key:
+                st.stop()
+        
+        try:
+            genai.configure(api_key=self.api_key)
+            self.model = genai.GenerativeModel('gemini-1.5-flash')
+            # Test the connection
+            self.model.generate_content("Test connection")
+        except Exception as e:
+            import streamlit as st
+            st.error(f"Failed to initialize Gemini API: {str(e)}")
+            st.stop()
     
     def generate_report(
         self,

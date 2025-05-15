@@ -1,0 +1,9 @@
+streamlit
+google-generativeai
+python-dotenv
+python-dateutil
+PyYAML
+pandas
+markdown
+python-docx
+requests

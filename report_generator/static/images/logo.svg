@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="256" cy="256" r="240" fill="#4F46E5" fill-opacity="0.1" stroke="#4F46E5" stroke-width="16"/>
+    
+    <!-- Document -->
+    <rect x="160" y="160" width="192" height="224" rx="8" fill="white" stroke="#4F46E5" stroke-width="16"/>
+    <rect x="192" y="208" width="128" height="16" rx="4" fill="#4F46E5" fill-opacity="0.7"/>
+    <rect x="192" y="240" width="96" height="16" rx="4" fill="#4F46E5" fill-opacity="0.7"/>
+    <rect x="192" y="272" width="112" height="16" rx="4" fill="#4F46E5" fill-opacity="0.7"/>
+    <rect x="192" y="304" width="80" height="16" rx="4" fill="#4F46E5" fill-opacity="0.7"/>
+    
+    <!-- Pen -->
+    <path d="M320 128L384 64L448 128L384 192L320 128Z" fill="#4F46E5"/>
+    <path d="M384 64L320 128L384 192L448 128L384 64Z" stroke="white" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M256 256L352 160" stroke="#4F46E5" stroke-width="16" stroke-linecap="round"/>
+    
+    <!-- Decorative Elements -->
+    <circle cx="128" cy="128" r="16" fill="#4F46E5" fill-opacity="0.3"/>
+    <circle cx="128" cy="384" r="24" fill="#4F46E5" fill-opacity="0.2"/>
+    <circle cx="384" cy="384" r="16" fill="#4F46E5" fill-opacity="0.3"/>
+    <circle cx="384" cy="128" r="24" fill="#4F46E5" fill-opacity="0.2"/>
+</svg>
